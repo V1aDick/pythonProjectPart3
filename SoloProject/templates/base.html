@@ -13,6 +13,16 @@
         </h1>
         <a href=" {% url 'post_new' %} ">+ New Django blog </a>
     </header>
+
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}</p>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+    <p><a href="{% url 'logout' %}">logout</a></p>
+
     <div class="container">
         {% block content %}
 

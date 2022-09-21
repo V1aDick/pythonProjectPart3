@@ -11,7 +11,7 @@
                 <div class="post-entry">
                     <h2> <a href="{% url 'post_detail' post.pk %}"> {{ post.title }} </a> </h2>
                     <p> <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post </a> </p>
-                    <p> <a htref="{% url 'post_delete' post.pk %}">+ Delete Blog Post </a> </p>
+                    <p> <a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post </a> </p>
                     <p> {{ post.body }} </p>
                 </div>
             {% endfor %}
